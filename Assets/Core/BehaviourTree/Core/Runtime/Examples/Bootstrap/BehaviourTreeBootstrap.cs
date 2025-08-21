@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using Core.ECS.BehaviourTree.Debug;
+using Core.BehaviourTree.Debug;
 using UnityEngine;
 
 namespace BehaviourTreeLogic.Bootstrap

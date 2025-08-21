@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Core.ECS.BehaviourTree.Debug
+namespace Core.BehaviourTree.Debug
 {
     public interface IDebugBrainProvider : IDisposable
     {

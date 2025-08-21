@@ -1,5 +1,5 @@
 using System;
-using Core.ECS.BehaviourTree.Debug;
+using Core.BehaviourTree.Debug;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;

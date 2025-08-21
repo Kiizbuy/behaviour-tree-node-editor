@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Core.ECS.BehaviourTree.Debug
+namespace Core.BehaviourTree.Debug
 {
     public static class MainDebugBrainProvider
     {
