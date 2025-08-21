@@ -8,5 +8,5 @@
 <br>
 <br>
     <h1>Behaviour Tree Node Editor</h1>
-    <img src="Documentation/Images/behaviour-tree-editor.png"/>
+    <img src="Assets/Documentation/Images/behaviour-tree-editor.png"/>
 </div>
