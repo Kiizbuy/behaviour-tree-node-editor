@@ -1,0 +1,15 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+namespace BehaviourTreeLogic
+{
+    [System.Serializable]
+    public class #SCRIPTNAME# : BaseUtilityEvaluator
+    {
+	protected override float EvaluateUtility()
+        {
+            return 1f;
+        }
+    }
+}

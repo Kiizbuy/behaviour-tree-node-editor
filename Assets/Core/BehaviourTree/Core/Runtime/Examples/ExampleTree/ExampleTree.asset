@@ -1,0 +1,144 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d285eb63c2cdd74180de7cfceaa96ad, type: 3}
+  m_Name: ExampleTree
+  m_EditorClassIdentifier: 
+  rootNode:
+    rid: 3618066640297001037
+  nodes:
+  - rid: 3618066640297001037
+  - rid: 3618066640297001038
+  - rid: 3618066640297001039
+  - rid: 3618066640297001040
+  - rid: 3618066640297001041
+  - rid: 3618066640297001042
+  groups:
+  - guid: 75005b98ed3176448bb6e3cc22e8ad75
+    title: ExampleGroup
+    position: {x: -251.20001, y: -400}
+    nodeGuids:
+    - 2c9e1c462adcc464c90d1952d372b8a4
+    - b99a3e7771bb7bf4abcc9af6a815a52f
+    - 827b9b738425544478079e2e3b966e94
+    - 3d7ec33e6c5808a43a6bcf6c1ed5b36e
+    - 58c20f9f-761c-4204-a9df-94da592548c6
+    - b479c2001659fdf4dbe1a4a9dd1dbbcf
+  blackboard:
+    keys:
+    - rid: 3618066640297001043
+  lastTickState: 0
+  viewPosition: {x: 0, y: 0, z: 0}
+  viewScale: {x: 0.25, y: 0.25, z: 1}
+  references:
+    version: 2
+    RefIds:
+    - rid: 3618066640297001037
+      type: {class: RootNode, ns: BehaviourTreeLogic, asm: Assembly-CSharp}
+      data:
+        title: 
+        started: 0
+        guid: 58c20f9f-761c-4204-a9df-94da592548c6
+        position: {x: 38.412796, y: -339.55164}
+        blackboard:
+          keys: []
+        description: '
+
+'
+        drawGizmos: 0
+        child:
+          rid: 3618066640297001038
+    - rid: 3618066640297001038
+      type: {class: Repeat, ns: BehaviourTreeLogic, asm: Assembly-CSharp}
+      data:
+        title: 
+        started: 0
+        guid: 3d7ec33e6c5808a43a6bcf6c1ed5b36e
+        position: {x: 34.412796, y: -197.15163}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        child:
+          rid: 3618066640297001041
+        restartOnSuccess: 1
+        restartOnFailure: 0
+        maxRepeats: 3
+    - rid: 3618066640297001039
+      type: {class: WaitForSeconds, ns: BehaviourTreeLogic, asm: Assembly-CSharp}
+      data:
+        title: Wait one second
+        started: 0
+        guid: 827b9b738425544478079e2e3b966e94
+        position: {x: -225.58719, y: 146.04837}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        _duration: 1
+    - rid: 3618066640297001040
+      type: {class: SimpleMoveToPoint, ns: Core.ECS.BehaviourTree.Core.Runtime.Examples.Nodes,
+        asm: Assembly-CSharp}
+      data:
+        title: Move to point
+        started: 0
+        guid: b479c2001659fdf4dbe1a4a9dd1dbbcf
+        position: {x: 266.41278, y: 143.64838}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        _stopDistance: 1
+        _moveSpeed: 2
+        _point:
+          reference:
+            rid: 3618066640297001043
+          defaultValue: {x: 0, y: 0, z: 0}
+    - rid: 3618066640297001041
+      type: {class: Sequencer, ns: BehaviourTreeLogic, asm: Assembly-CSharp}
+      data:
+        title: 
+        started: 0
+        guid: b99a3e7771bb7bf4abcc9af6a815a52f
+        position: {x: 29.612808, y: -57.151627}
+        blackboard:
+          keys: []
+        description: "Simple\n Move logic"
+        drawGizmos: 0
+        children:
+        - rid: 3618066640297001039
+        - rid: 3618066640297001042
+        - rid: 3618066640297001040
+        PointerId: 16b527c1-4399-4203-acfc-43357da778bb
+    - rid: 3618066640297001042
+      type: {class: RandomPosition, ns: BehaviourTreeLogic, asm: Assembly-CSharp}
+      data:
+        title: 
+        started: 0
+        guid: 2c9e1c462adcc464c90d1952d372b8a4
+        position: {x: 13.612808, y: 125.24838}
+        blackboard:
+          keys: []
+        description: Set random point with bounds
+        drawGizmos: 0
+        min: {x: -15, y: 0, z: -15}
+        max: {x: 15, y: 0, z: 15}
+        result:
+          reference:
+            rid: 3618066640297001043
+          defaultValue: {x: 0, y: 0, z: 0}
+    - rid: 3618066640297001043
+      type: {class: Vector3Key, ns: BehaviourTreeLogic, asm: Assembly-CSharp}
+      data:
+        name: MovePoint
+        typeName: UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
+          PublicKeyToken=null
+        value: {x: 0, y: 0, z: 0}
